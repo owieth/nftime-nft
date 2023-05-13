@@ -48,16 +48,17 @@
 
       const date = epochToFullDateTime(time * 1000);
 
-      // document.getElementById("hour").innerHTML = date.hour;
-      // document.getElementById("minute").innerHTML = date.minute;
-      // document.getElementById("weekDay").innerHTML = date.weekDay;
-      // document.getElementById("year").innerHTML = date.year;
-      // document.getElementById("month").innerHTML = date.month;
-      // document.getElementById("day").innerHTML = date.day;
-      // document.getElementById("dayClock").innerHTML = date.day;
-      console.log(document.getElementById("svg"))
+      window.addEventListener("load", (event) => {
+        document.getElementById("hour").innerHTML = date.hour;
+        document.getElementById("minute").innerHTML = date.minute;
+        document.getElementById("weekDay").innerHTML = date.weekDay;
+        document.getElementById("year").innerHTML = date.year;
+        document.getElementById("month").innerHTML = date.month;
+        document.getElementById("day").innerHTML = date.day;
+        document.getElementById("dayClock").innerHTML = date.day;
+      });
 
-      setTimeout(() => window.alert(JSON.stringify(date)), 10000)
+      // setTimeout(() => window.alert(JSON.stringify(date)), 10000)
     </script>
   </head>
 
@@ -162,57 +163,43 @@
 
       <foreignObject x="520" y="520" height="200" width="200">
         <div class="container" xmlns="http://www.w3.org/1999/xhtml">
-          <p id="hour" style="font-size: 142px">
-            10
-          </p>
+          <p id="hour" style="font-size: 142px"/>
         </div>
       </foreignObject>
 
       <foreignObject x="760" y="520" height="200" width="200">
         <div class="container" xmlns="http://www.w3.org/1999/xhtml">
-          <p id="minute" style="font-size: 142px">
-            10
-          </p>
+          <p id="minute" style="font-size: 142px" />
         </div>
       </foreignObject>
 
       <foreignObject x="520" y="760" height="200" width="440">
         <div class="container" xmlns="http://www.w3.org/1999/xhtml">
-          <p id="weekDay" style="font-size: 138px">
-            MON
-          </p>
+          <p id="weekDay" style="font-size: 138px" />
         </div>
       </foreignObject>
 
       <foreignObject x="520" y="40" height="200" width="440">
         <div class="container" xmlns="http://www.w3.org/1999/xhtml">
-          <p id="year" style="font-size: 142px">
-            2023
-          </p>
+          <p id="year" style="font-size: 142px" />
         </div>
       </foreignObject>
 
       <foreignObject x="520" y="280" height="200" width="440">
         <div class="container" xmlns="http://www.w3.org/1999/xhtml">
-          <p id="month" style="font-size: 142px">
-            FEB
-          </p>
+          <p id="month" style="font-size: 142px" />
         </div>
       </foreignObject>
 
       <foreignObject x="40" y="40" height="440" width="440">
         <div class="container" xmlns="http://www.w3.org/1999/xhtml">
-          <p id="day" style="font-size: 360px">
-            01
-          </p>
+          <p id="day" style="font-size: 360px" />
         </div>
       </foreignObject>
 
       <foreignObject x="330" y="730" height="20" width="20">
         <div class="container" xmlns="http://www.w3.org/1999/xhtml">
-          <p id="dayClock" style="font-size: 11px">
-            01
-          </p>
+          <p id="dayClock" style="font-size: 11px" />
         </div>
       </foreignObject>
 
