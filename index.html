@@ -56,9 +56,10 @@
         document.getElementById("month").innerHTML = date.month;
         document.getElementById("day").innerHTML = date.day;
         document.getElementById("dayClock").innerHTML = date.day;
+        
+        document.getElementById("clockHour").setAttribute('transform', `rotate(${date.hour * 30}, 283, 283)`);
+        document.getElementById("clockMinute").setAttribute('transform', `rotate(${date.minute * 6}, 283, 283)`);
       });
-
-      // setTimeout(() => window.alert(JSON.stringify(date)), 10000)
     </script>
   </head>
 
@@ -218,10 +219,8 @@
             d="M434.716 283H544M22 283h109.184M283 434.716V544M283 22v109.184M152.5 56.927l54.542 94.572M358.858 414.401l54.642 94.672M56.927 152.5l94.572 54.542M509.073 413.5l-94.672-54.642M414.401 207.042l94.672-54.542M56.927 413.5l94.572-54.642M358.858 151.499L413.5 56.927M207.042 414.401L152.5 509.073" />
           <path fill="white"
             d="M283 295.81c7.075 0 12.81-5.735 12.81-12.81s-5.735-12.81-12.81-12.81-12.81 5.735-12.81 12.81 5.735 12.81 12.81 12.81z" />
-          <path id="clockHour" fill="white" d="M283 139.69l-4.503 11.609V283h9.006V151.299L283 139.69z"
-            transform=computeRotation(10) />
-          <path fill="white" d="M287.503 65.633L283 53.324l-4.503 12.31V282.9h9.006V65.633z"
-            transform="rotate(8,283,283)" />
+          <path id="clockHour" fill="white" d="M283 139.69l-4.503 11.609V283h9.006V151.299L283 139.69z" />
+          <path id="clockMinute" fill="white" d="M287.503 65.633L283 53.324l-4.503 12.31V282.9h9.006V65.633z" />
           <path fill="white" fillRule="evenodd"
             d="M284.201 283V53.224h-2.402V283l-1.001 36.928v22.618h4.404v-22.618L284.201 283z" clipRule="evenodd"
             transform="rotate(10,283,283)" />
