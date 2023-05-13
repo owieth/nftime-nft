@@ -40,7 +40,9 @@
         }
       }
 
-      const date = epochToFullDateTime(1893495600 * 1000);
+      const time = new URLSearchParams(window.location.search).get('time');
+
+      const date = epochToFullDateTime(time * 1000);
 
       // document.getElementById("hour").innerHTML = date.hour;
       // document.getElementById("minute").innerHTML = date.minute;
@@ -50,7 +52,7 @@
       // document.getElementById("day").innerHTML = date.day;
       // document.getElementById("dayClock").innerHTML = date.day;
 
-      // setTimeout(() => window.alert(JSON.stringify(epochToFullDateTime(1893495600 * 1000))), 10000)
+      setTimeout(() => window.alert(JSON.stringify(date)), 10000)
     </script>
   </head>
 
