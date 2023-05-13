@@ -3,7 +3,45 @@
 <html>
   <head>
     <script type="text/javascript">
-      // window.alert('hey')
+      function epochToFullDateTime(timestamp) {
+        if (!timestamp) return;
+
+        let dateObject = new Date(timestamp);
+
+        const year = new Intl.DateTimeFormat('en-US', {
+          year: 'numeric',
+        }).format(dateObject);
+        const month = new Intl.DateTimeFormat('en-US', {
+          month: 'short',
+        }).format(dateObject);
+        const weekDay = new Intl.DateTimeFormat('en-US', {
+          weekday: 'short',
+        }).format(dateObject);
+        const day = new Intl.DateTimeFormat('en-US', {
+          day: '2-digit',
+        }).format(dateObject);
+        const hour = new Intl.DateTimeFormat('en-US', {
+          hour: '2-digit',
+          hour12: false,
+        }).format(dateObject);
+        const minute = new Intl.DateTimeFormat('en-US', {
+          hour12: false,
+          hour: '2-digit',
+          minute: '2-digit',
+        }).format(dateObject);
+
+        return {
+          year,
+          month: month.toUpperCase(),
+          weekDay: weekDay.toUpperCase(),
+          day,
+          hour,
+          minute: minute.slice(3)
+        }
+      }
+
+
+      setTimeout(() => window.alert(JSON.stringify(epochToFullDateTime(1893495600 * 1000))), 10000)
     </script>
   </head>
 
