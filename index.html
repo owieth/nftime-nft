@@ -59,6 +59,13 @@
         
         document.getElementById("clockHour").setAttribute('transform', `rotate(${date.hour * 30}, 283, 283)`);
         document.getElementById("clockMinute").setAttribute('transform', `rotate(${date.minute * 6}, 283, 283)`);
+
+        let rotation = 0;
+
+        setInterval(() => {
+          rotation++;
+          document.getElementById("clockSecond").setAttribute('transform', `rotate(${rotation * 6}, 283, 283)`);
+        }, 1000);
       });
     </script>
   </head>
@@ -221,9 +228,8 @@
             d="M283 295.81c7.075 0 12.81-5.735 12.81-12.81s-5.735-12.81-12.81-12.81-12.81 5.735-12.81 12.81 5.735 12.81 12.81 12.81z" />
           <path id="clockHour" fill="white" d="M283 139.69l-4.503 11.609V283h9.006V151.299L283 139.69z" />
           <path id="clockMinute" fill="white" d="M287.503 65.633L283 53.324l-4.503 12.31V282.9h9.006V65.633z" />
-          <path fill="white" fillRule="evenodd"
-            d="M284.201 283V53.224h-2.402V283l-1.001 36.928v22.618h4.404v-22.618L284.201 283z" clipRule="evenodd"
-            transform="rotate(10,283,283)" />
+          <path id="clockSecond" fill="white" fillRule="evenodd"
+            d="M284.201 283V53.224h-2.402V283l-1.001 36.928v22.618h4.404v-22.618L284.201 283z" clipRule="evenodd" />
         </svg>
       </g>
 
